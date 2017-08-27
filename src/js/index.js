@@ -11,6 +11,15 @@ $(function(){
 		loop:true,
 	});
 
+	//team;
+	var teamSwiper = new Swiper('.team-swiper-container',{
+		prevButton:'.swiper-button-prev',
+		nextButton:'.swiper-button-next',
+		loop:false,
+		autoplay:0,
+		speed:1000,
+	}) 
+
 	// 移动端menu弹出效果；
 	var isMenuDown = false;
 	$('.menudown').on('click',function(){
