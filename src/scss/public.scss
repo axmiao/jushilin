@@ -974,6 +974,94 @@ img{
 }
 // feeling end;
 
+// reports start;
+.reports{
+	width:100%;
+	height:auto;
+	.inner{
+		width:100%;
+		height:auto;
+		overflow: hidden;
+		.report-list{
+			float:left;
+			width:33.33%;
+			padding:25px 27px;
+			.pic{
+				width:100%;
+				overflow: hidden;
+				height:auto;
+				position:relative;
+				img{
+					transition: all 0.3s ease 0s;
+					height:auto;
+				}
+				.mask{
+					transition:all 0.3s ease 0s;
+					width:100%;
+					height:100%;
+					position:absolute;
+					left:0;
+					top:0;
+					z-index: 2;
+					background:rgba(0,0,0,0);
+				}
+			}
+			&:hover{
+				.pic{
+					img{
+						transform: scale(1.05,1.05);
+					}
+				}
+				.mask{
+					background:rgba(0,0,0,0.5);
+				}
+			}
+			.infor{
+				width:100%;
+				height:auto;
+				font-size:14px;
+				line-height: 34px;
+				padding:10px 6px;
+				color:$tcolorb;
+				border:2px solid $tcolorg;
+			}
+		}
+	}
+}
+// reports end;
+
+// repo start;
+.repo{
+	width:100%;
+	height:auto;
+	.inner{
+		padding:20px 10px;
+		overflow: hidden;
+		.pic{
+			float:left;
+			width:50%;
+			height:auto;
+			border-radius:10px;
+			overflow: hidden;
+			img{
+				height:auto;
+			}
+		}
+		.intro{
+			float:right;
+			width:50%;
+			padding:30px 50px;
+			p{
+				margin-bottom:70px;
+				font-size:16px;
+				line-height: 34px;
+				color:$tcolorb;
+			}
+		}
+	}
+}
+// repo end;
+
 // media query;
 @media only screen and (max-width: 1200px){
 	.header-pc{
@@ -1051,6 +1139,18 @@ img{
 			}
 		}
 	}
+	.repo{
+		.inner{
+			.intro{
+				padding:10px;
+				p{
+					font-size: 14px;
+					line-height: 28px;
+					margin-bottom:40px;
+				}
+			}
+		}
+	}
 }
 
 @media only screen and (max-width:992px){
@@ -1112,6 +1212,13 @@ img{
 	}
 	.season{
 		height:700px;
+	}
+	.reports{
+		.inner{
+			.report-list{
+				width:50%;
+			}
+		}
 	}
 }
 @media only screen and (max-width:768px){
@@ -1291,6 +1398,34 @@ img{
 			}
 			.bddown{
 				display: none;
+			}
+		}
+	}
+	.reports{
+		.inner{
+			.report-list{
+				padding:10px;
+				.infor{
+					line-height: 28px;
+					padding:6px;
+				}
+			}
+		}
+	}
+	.repo{
+		.inner{
+			.pic{
+				float:none;
+				width:80%;
+				margin:0 auto;
+			}
+			.intro{
+				float:none;
+				width:90%;
+				margin:0 auto;
+				p{
+					margin-bottom:10px;
+				}
 			}
 		}
 	}
@@ -1486,5 +1621,19 @@ img{
 			}
 		}
 	}
-	
+	.reports{
+		.inner{
+			.report-list{
+				width:100%;
+				float:none;
+			}
+		}
+	}
+	.repo{
+		.inner{
+			.intro{
+				width:98%;
+			}
+		}
+	}
 }
