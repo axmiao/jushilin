@@ -4,6 +4,7 @@ $tcolorb:#333333;
 $twhite:#dbdbdb;
 $backb:#1e1e1e;
 $white:#ffffff;
+$footbg:#eeeeee;
 
 
 @font-face {
@@ -709,7 +710,8 @@ img{
 .footer{
 	width:100%;
 	height:170px;
-	background:$white;
+	background:$footbg;
+	overflow:hidden;
 	.foot-nav{
 		width:100%;
 		overflow: hidden;
@@ -730,6 +732,55 @@ img{
 }
 // footer end;
 
+// volunteer start;
+.volunteer{
+	width:100%;
+	height:1000px;
+	background:url('../img/volunteerbg.png') no-repeat center center;
+	background-size:cover;
+	.tit{
+		color:$white;
+	}
+	.inner{
+		width:100%;
+		height:auto;
+		overflow: hidden;
+		.tips{
+			font-size:36px;
+			height:36px;
+			color:$white;
+			text-align: center;
+			margin-top:100px;
+		}
+		.qq,.wechat{
+			float:left;
+			width:50%;
+			margin-top:64px;
+			text-align: center;
+			.qrcode{
+				margin:0 auto;
+				width:320px;
+				height:320px;
+				border:2px solid $tcolorb;
+				padding:10px;
+			}
+			.name{
+				color:$white;
+				margin-top:65px;
+				font-size:36px;
+				height:36px;
+			}
+		}
+		.iqq::before{
+			content:'\e70f';
+		}
+		.wchat::before{
+			content:'\e638';
+		}
+	}
+}
+// volunteer end;
+
 // media query;
 @media only screen and (max-width: 1200px){
 	.header-pc{
@@ -743,6 +794,42 @@ img{
 	.ban-swiper-container{
 		.wf-wrap{
 			left:0;
+		}
+	}
+	.linkout{
+		.linktit{
+			text-align: center;
+		}
+		.inner{
+			width:100%;
+			max-width:990px;
+			float:none;
+			margin:0 auto;
+			ul{
+				margin-bottom:30px;
+			}
+			li{
+				margin-top:30px;
+			}
+		}
+		.qrcode{
+			margin:0 auto;
+			float: none;
+			margin-bottom:30px;
+		}
+	}
+	.volunteer{
+		height:600px;
+		.inner{
+			.tips{
+				margin-top:15px;
+			}
+			.qq,.wechat{
+				margin-top:20px;
+				.name{
+					margin-top:30px;
+				}
+			}
 		}
 	}
 }
@@ -762,6 +849,27 @@ img{
 			padding-top:25px;
 			.for-list{
 				width:33.33%;
+			}
+		}
+	}
+	.volunteer{
+		height:450px;
+		.inner{
+			.tips{
+				font-size:22px;
+				line-height: 22px;
+				height:22px;
+				margin-top:0;
+			}
+			.qq,.wechat{
+				.qrcode{
+					width:200px;
+					height:200px;
+				}
+				.name{
+					margin-top:20px;
+					font-size:22px;
+				}
 			}
 		}
 	}
@@ -867,10 +975,12 @@ img{
 		}
 	} 
 	.footer{
+		height:auto;
 		.foot-nav{
 			display: none;
 		}
 		.cpright{
+			margin:15px 0;
 			text-align: center;
 		}
 	}
@@ -1021,6 +1131,23 @@ img{
 		.inner {
 			p{
 				padding:5px 0;
+			}
+		}
+	}
+	.volunteer{
+		height:680px;
+		.inner{
+			.tips{
+				font-size:16px;
+				margin-top:10px;
+			}
+			.qq,.wechat{
+				float: none;
+				width:100%;
+				.name{
+					font-size:16px;
+					height:16px;
+				}
 			}
 		}
 	}
