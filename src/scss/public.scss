@@ -781,6 +781,199 @@ img{
 }
 // volunteer end;
 
+// lang start;
+.lang{
+	width:100%;
+	height:auto;
+	background:$white;
+	.inner{
+		width:100%;
+		overflow: hidden;
+		margin-top:50px;
+		.pic{
+			float:left;
+			width:240px;
+			height:auto;
+			img{
+				height:auto;
+			}
+		}
+		.info{
+			width: calc(100% - 240px);
+			float:right;
+			.lang-list{
+				overflow: hidden;
+				margin-bottom:65px;
+				.picture{
+					float:left;
+					margin:10px 50px 0 100px;
+					width:90px;
+					height:90px;
+				}
+				.intro{
+					float:right;
+					width:calc(100% - 240px);
+					.title{
+						font-weight: bold;
+						font-size:18px;
+						color:$tcolorb;
+						margin-bottom:25px;
+					}
+					.subtitle{
+						font-size:14px;
+						line-height: 34px;
+						color:$tcolorb;
+					}
+				}
+			}
+		}
+	}
+}
+// lang end;
+
+// season start;
+.season{
+	width:100%;
+	height:1000px;
+	background:url('../img/volunteerbg.png') no-repeat center center;
+	background-size:cover;
+	color:$white;
+	.tit{
+		color:$white;
+	}
+	.inner{
+		width:100%;
+		height:auto;
+		overflow: hidden;
+		.sea-list{
+			float:left;
+			width:33.33%;
+			margin-top:165px;
+			.pic{
+				width:140px;
+				height:140px;
+				margin:0 auto;
+			}
+			.name{
+				font-size:36px;
+				text-align: center;
+				margin-top:80px;
+			}
+			.intro{
+				padding:0 28px;
+				font-size:18px;
+				line-height: 34px;
+				margin-top:80px;
+			}
+			a{
+				display: block;
+				width:105px;
+				height:30px;
+				line-height: 30px;
+				margin-top: 50px;
+				border:1px solid $white;
+				text-align: center;
+				font-size: 16px;
+				margin-left:28px;
+				border-radius:15px;
+			}
+		}
+	}
+}
+// season end;
+
+// feeling start;
+.feeling{
+	width:100%;
+	height:auto;
+	background:$white;
+	.inner{
+		width:100%;
+		max-width:910px;
+		margin:0 auto;
+		padding:45px 0;
+		overflow: hidden;
+		position:relative;
+		.feel-list{
+			width:50%;
+			height:auto;
+			float:left;
+			margin:20px 0;
+			&:nth-of-type(2n+1){
+				text-align: right;
+				border-right:1px solid $tcolorb;
+			}
+			&:nth-of-type(2n){
+				text-align: left;
+			}
+			&:nth-of-type(3),&:nth-of-type(4){
+				padding-top:25px;
+				height: auto;
+				.name{
+					margin-top:25px;
+				}
+				.intro{
+					margin-top:15px;
+				}
+			}
+		}
+		.bddown{
+			width:40%;
+			height:1px;
+			border-bottom:1px solid $tcolorb;
+			float:left;
+			margin:0 5%;
+		}
+		.mask{
+			width:135px;
+			height:50px;
+			background:$white;
+			position:absolute;
+			left:0;
+			right:0;
+			top:0;
+			bottom:0;
+			margin:auto;
+			z-index: 2;
+			display: block;
+		}
+		.pic{
+			margin-top: 10px;
+			font-size:72px;
+			height:72px;
+			line-height: 72px;
+			padding:0 64px;
+			color:$tcolorb;
+			.teach::before{
+				content:'\e60a';
+			}
+			.job::before{
+				content:'\e609';
+			}
+			.home::before{
+				content:'\e73a';
+			}
+			.charity::before{
+				content:'\e814';
+			}
+		}
+		.name{
+			font-size: 18px;
+			margin-top:37px;
+			padding:0 85px;
+			color:$tcolorg;
+		}
+		.intro{
+			font-size: 14px;
+			line-height: 34px;
+			margin-top:20px;
+			color:$tcolorg;
+			padding:0 64px;
+		}
+	}
+}
+// feeling end;
+
 // media query;
 @media only screen and (max-width: 1200px){
 	.header-pc{
@@ -832,6 +1025,32 @@ img{
 			}
 		}
 	}
+	.season{
+		height:650px;
+		.inner{
+			.sea-list{
+				margin-top:30px;
+				.pic{
+					width:100px;
+					height:100px;
+				}
+				.name{
+					margin-top:30px;
+					font-size: 28px;
+				}
+				.intro{
+					padding:0 19px;
+					font-size:14px;
+					margin-top:20px;
+					line-height: 28px;
+				}
+				a{
+					margin-top:25px;
+					margin-left:20px;
+				}
+			}
+		}
+	}
 }
 
 @media only screen and (max-width:992px){
@@ -873,7 +1092,27 @@ img{
 			}
 		}
 	}
-	
+	.lang{
+		.inner{
+			.pic{
+				display: none;
+			}
+			.info{
+				width:100%;
+				.lang-list{
+					.picture{
+						margin:10px 50px 0 50px;
+					}
+					.intro{
+						margin-right:50px;
+					}
+				}
+			}
+		}
+	}
+	.season{
+		height:700px;
+	}
 }
 @media only screen and (max-width:768px){
 	.tit{
@@ -982,6 +1221,77 @@ img{
 		.cpright{
 			margin:15px 0;
 			text-align: center;
+		}
+	}
+	.lang{
+		.inner{
+			.info{
+				.lang-list{
+					width:90%;
+					margin:0 auto 65px;
+					.picture{
+						margin-left:0;
+					}
+					.intro{
+						margin-right:0;
+						width:calc(100% - 140px);
+					}
+				}
+			}
+		}
+	}
+	.season{
+		height:auto;
+		.inner{
+			.sea-list{
+				float:none;
+				width:100%;
+				margin-top:20px;
+				.pic{
+					width:50px;
+					height:50px;
+				}
+				.name{
+					font-size:22px;
+					margin-top: 10px;
+				}
+				.intro{
+					margin-top:5px;
+					line-height: 22px;
+				}
+				a{
+					margin:10px auto 20px;
+				}
+			}
+		}
+	}
+	.feeling{
+		.inner{
+			padding:20px 0;
+			.feel-list{
+				float:none;
+				width:100%;
+				border:none!important;
+				.pic,.name,.intro{
+					text-align: center;
+				}
+				.pic{
+					font-size: 50px;
+					line-height: 50px;
+					height: 50px;
+				}
+				.name{
+					margin-top:5px;
+				}
+				.intro{
+					line-height: 24px;
+					margin-top: 5px;
+					padding:0 30px;
+				}
+			}
+			.bddown{
+				display: none;
+			}
 		}
 	}
 }
@@ -1151,4 +1461,30 @@ img{
 			}
 		}
 	}
+	.lang{
+		.inner{
+			.info{
+				.lang-list{
+					margin:0 auto 30px;
+					.picture{
+						float:none;
+						margin:0 auto 10px;
+					}
+					.intro{
+						float:none;
+						width:100%;
+						.title{
+							text-align: center;
+							margin-bottom:0;
+						}
+						.subtitle{
+							line-height: 28px;
+						}
+					}
+					
+				}
+			}
+		}
+	}
+	
 }
