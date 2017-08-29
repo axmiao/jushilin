@@ -335,6 +335,35 @@ img{
 }
 // home-r end;
 
+// charity-r start;
+.charity-r{
+	background:url('../img/tree01.png') no-repeat center center;
+	.poem{
+		font-size:46px;
+		line-height: 102px;
+		color:$white;
+		text-align: center;
+	}
+	a{
+		display: block;
+		text-align: center;
+		width:105px;
+		height:30px;
+		line-height: 30px;
+		color:$white;
+		font-size:16px;
+		border-radius:15px;
+		margin:100px auto 85px;
+		border:1px solid $white;
+		transition: all 0.3s ease 0s;
+		&:hover{
+			background:$grayb;
+
+		}
+	}
+}
+// charity-r end;
+
 // forest start;
 .forest{
 	width:100%;
@@ -1487,6 +1516,74 @@ img{
 }
 // project end;
 
+// build start;
+.build{
+	width:100%;
+	height:auto;
+	.inner{
+		width:100%;
+		height:auto;
+		overflow: hidden;
+		margin-bottom:70px;
+		.build-list{
+			float:left;
+			width:18%;
+			margin:0 1%;
+			background:$footbg;
+			color:$tcolorb;
+			border-radius:10px;
+			text-align: center;
+			.pic{
+				width:100%;
+				height:82px;
+				line-height: 82px;
+				font-size: 82px;
+				margin-top:50px;
+				.fu::before{
+					content:'\e63c';
+				}
+				.yin::before{
+					content:'\e602';
+				}
+				.chi::before{
+					content:'\e603';
+				}
+				.sheng::before{
+					content:'\e619';
+				}
+				.juan::before{
+					content:'\e61d';
+				}
+			}
+			.title{
+				font-size: 22px;
+				margin-top:35px;
+			}
+			a{
+				width:105px;
+				height:30px;
+				margin:112px auto 35px;
+				border:1px solid $tcolorb;
+				border-radius:15px;
+				text-align: center;
+				display: block;
+				font-size: 16px;
+				line-height: 30px;
+			}
+		}
+	}
+	.intro-b{
+		line-height: 38px;
+		font-size:18px;
+		color: $tcolorb;
+		text-align: center;
+		width:100%;
+		max-width:1200px;
+		margin:25px auto;
+	}
+}
+// build end;
+
 // media query;
 @media only screen and (max-width: 1200px){
 	.header-pc{
@@ -1653,6 +1750,7 @@ img{
 			}
 		}
 	}
+
 }
 
 @media only screen and (max-width:992px){
@@ -1773,6 +1871,28 @@ img{
 					a{
 						margin-top:10px;
 					}
+				}
+			}
+		}
+	}
+	.charity-r{
+		height:auto;
+		padding-bottom:30px;
+		.poem{
+			font-size: 30px;
+			line-height: 46px;
+		}
+		a{
+			margin:40px auto 0;
+		}
+	}
+	.build{
+		.inner{
+			.build-list{
+				width:31.33%;
+				margin:20px 1%;
+				a{
+					margin:50px auto 30px;
 				}
 			}
 		}
@@ -2144,6 +2264,23 @@ img{
 			}
 		}
 	}
+	.charity-r{
+		.poem{
+			font-size:26px;
+			line-height: 40px;
+		}
+	}
+	.build{
+		.inner{
+			.build-list{
+				width:48%;
+				margin:20px 1%;
+				a{
+					margin:50px auto 30px;
+				}
+			}
+		}
+	}
 }
 @media only screen and (max-width: 440px){
 	.tit{
@@ -2367,6 +2504,23 @@ img{
 				}
 				a{
 					margin:15px auto;
+				}
+			}
+		}
+	}
+	.charity-r{
+		.poem{
+			font-size: 18px;
+			line-height: 36px;
+		}
+	}
+	.build{
+		.inner{
+			.build-list{
+				width:98%;
+				margin:20px 1%;
+				a{
+					margin:50px auto 30px;
 				}
 			}
 		}
