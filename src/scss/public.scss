@@ -1413,6 +1413,80 @@ img{
 }
 // list end;
 
+// project start;
+.project{
+	width:100%;
+	height:auto;
+	.inner{
+		margin-top: 40px;
+		.proj-list{
+			width:100%;
+			overflow:hidden;
+			.pic{
+				width:50%;
+				float:left;
+				height:auto;
+				overflow:hidden;
+				img{
+					transition: all 0.3s ease 0s;
+					height:auto;
+				}
+				&:hover{
+					img{
+						transform: scale(1.05,1.05);
+					}
+				}
+			}
+			.intro{
+				width:50%;
+				float:left;
+				height:auto;
+				padding:30px 30px 0 30px;
+				.title{
+					font-size: 24px;
+					color:$tcolorb;
+					margin-bottom: 28px;
+				}
+				.info{
+					color: $tcolorg;
+					font-size: 18px;
+					line-height: 34px;
+					overflow:hidden; 
+					text-overflow:ellipsis;
+					display:-webkit-box; 
+					-webkit-box-orient:vertical;
+					-webkit-line-clamp:3; 
+				}
+				a{
+					display: block;
+					width:105px;
+					height:30px;
+					line-height: 30px;
+					border:1px solid $tcolorb;
+					text-align:center;
+					border-radius:15px;
+					font-size: 14px;
+					margin-top:22px;
+					transition: all 0.3s ease 0s;
+					&:hover{
+						background:$tcolorg;
+						color:$white;
+					}
+				}
+			}
+			&:nth-of-type(2n){
+				.pic{
+					float:right;
+				}
+				.intro{
+					float:right;
+				}
+			}
+		}
+	}
+}
+// project end;
+
 // media query;
 @media only screen and (max-width: 1200px){
 	.header-pc{
@@ -1680,6 +1754,26 @@ img{
 			padding:10px 10px 0 10px;
 			.name{
 				font-size:18px;
+			}
+		}
+	}
+	.project{
+		.inner{
+			padding:0 30px;
+			.proj-list{
+				.intro{
+					.title{
+						font-size:20px;
+						margin-bottom:5px;
+					}
+					.info{
+						font-size: 16px;
+						line-height: 26px;
+					}
+					a{
+						margin-top:10px;
+					}
+				}
 			}
 		}
 	}
@@ -2029,6 +2123,24 @@ img{
 			.tobuy{
 				margin:15px auto 0;
 				font-size:20px;
+			}
+		}
+	}
+	.project{
+		.inner{
+			.proj-list{
+				.pic{
+					float:none;
+					width:100%;
+				}
+				.intro{
+					float:none;
+					width:100%;
+					text-align:center;
+					a{
+						margin:20px auto;
+					}
+				}
 			}
 		}
 	}
