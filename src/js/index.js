@@ -42,4 +42,10 @@ $(function(){
 			return;
 		}
 	})
+
+	// 单选框选中事件；
+	$('.choice .sele').on('click',function(){
+		$(this).addClass('cur').siblings('.sele').removeClass('cur');
+	});
+
 })

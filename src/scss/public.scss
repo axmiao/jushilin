@@ -9,7 +9,7 @@ $footbg:#eeeeee;
 $backg:#353535;
 $grayb:#505050;
 $tbackw:#f6f6f6;
-
+$actcolor:#ff0000;
 
 @font-face {
 	font-family: 'iconfont';
@@ -438,6 +438,16 @@ img{
 	}
 }
 // forest end;
+
+// volun-f start;
+.volun-f{
+	background:$white;
+	.tit{
+		color:$tcolorb;
+	}
+}
+// volun-f end;
+
 
 // team start;
 .team{
@@ -1584,6 +1594,123 @@ img{
 }
 // build end;
 
+// form-vo start;
+.form-vo{
+	width:100%;
+	height:auto;
+	background:$white;
+	color:$tcolorb;
+	.inner{
+		width:100%;
+		height:auto;
+		overflow: hidden;
+		.msg{
+			float:left;
+			width:50%;
+			overflow:hidden;
+			height:auto;
+			padding:45px 0;
+			label{
+				display:block;
+				width:135px;
+				float:left;
+				text-align: left;
+				font-size: 22px;
+				line-height: 40px;
+				height:40px;
+			}
+			input{
+				float:left;
+				display: block;
+				width:365px;
+				height: 40px;
+				line-height: 40px;
+				outline: none;
+				border:1px solid $tcolorb;
+				border-radius:5px;
+				padding:0 10px;
+				font-size: 18px;
+			}
+			.choice{
+				width:365px;
+				height: 40px;
+				font-size: 20px;
+				line-height: 40px;
+				overflow:hidden;
+				.sele{
+					padding:0 20px;
+					display: inline-block;
+					.bullet{
+						float:left;
+						margin:7px 20px;
+						width:26px;
+						height:26px;
+						border:1px solid $tcolorg;
+						position: relative;
+						border-radius:50%;
+						span{
+							display: block;
+							position: absolute;
+							left:4px;
+							top:4px;
+							width:16px;
+							height:16px;
+							background:$white;
+							border-radius: 50%;
+						}
+					}
+					&.cur{
+						.bullet{
+							span{
+								background:$actcolor;
+
+							}
+						}
+					}
+				}
+			}
+			.tips{
+				float: left;
+			    margin-top: 25px;
+			    line-height: 18px;
+			}
+			#registry{
+				width:365px;
+				height:40px;
+				line-height: 40px;
+				text-align:center;
+				color:$white;
+				font-size: 18px;
+				background:$tcolorg;
+				border-radius:5px;
+				margin-left:135px;
+				cursor: pointer;
+			}
+			&.long{
+				float:none;
+				clear:both;
+				width:100%;
+				margin:75px 0;
+				label{
+					float:none;
+				}
+				.choice{
+					float:none;
+					width:100%;
+					margin-top:25px;
+					.sele{
+						width:19%;
+						.bullet{
+							margin: 7px 20px 7px 0;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+// form-vo end;
+
 // media query;
 @media only screen and (max-width: 1200px){
 	.header-pc{
@@ -1896,6 +2023,19 @@ img{
 				}
 			}
 		}
+	}
+	.form-vo .inner{
+		.msg{
+			padding:10px 0;
+			input{
+				width:75%;
+			}
+			#registry{
+				margin-left:0;
+				margin-top:40px;
+				width:75%;
+			}
+		} 
 	}
 }
 @media only screen and (max-width:768px){
@@ -2281,6 +2421,53 @@ img{
 			}
 		}
 	}
+	.form-vo{
+		.inner{
+			.msg{
+				label{
+					font-size: 18px;
+					line-height: 36px;
+				}
+				input{
+					height:30px;
+					line-height: 30px;
+					font-size: 16px;
+				}
+				.choice{
+					width:75%;
+					height:30px;
+					line-height: 30px;
+					font-size: 16px;
+					.sele{
+						padding:0 10px;
+						.bullet{
+							width:20px;
+							height:20px;
+							margin:5px 20px;
+							span{
+								width:10px;
+								height:10px;
+							}
+						}
+					}
+				}
+				#registry{
+					height:30px;
+					line-height: 30px;
+					font-size: 16px;
+				}
+				&.long{
+					.choice{
+						.sele{
+							.bullet{
+								margin:7px 7px 7px 0;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
 }
 @media only screen and (max-width: 440px){
 	.tit{
@@ -2521,6 +2708,33 @@ img{
 				margin:20px 1%;
 				a{
 					margin:50px auto 30px;
+				}
+			}
+		}
+	}
+	.form-vo{
+		.inner{
+			.msg{
+				float:none;
+				width:96%;
+				padding:0;
+				margin-left:4%;
+				label{
+					font-size:16px;
+				}
+				input{
+					font-size: 14px;
+				}
+				&.long {
+					margin:20px 0;
+					.choice{
+						margin-top:0;
+						height:auto;
+						.sele{
+							width:31%;
+						}
+					}
+
 				}
 			}
 		}
